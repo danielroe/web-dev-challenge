@@ -28,7 +28,19 @@ const responseSchema = {
 } as const
 
 type Response = {
-  [key in keyof typeof responseSchema['properties']]: typeof responseSchema['properties'][key]['type'] extends 'string' ? 'enum' extends keyof typeof responseSchema['properties'][key] ? typeof responseSchema['properties'][key]['enum'] extends Array<infer S> ? S : string : string : typeof responseSchema['properties'][key]['type'] extends 'boolean' ? boolean : unknown
+  longTitle: string
+  shortTitle: string
+  description: string
+  slides: {
+    title: string
+    description: string
+    text: string
+    image?: {
+      src: string
+      width: number
+      height: number
+    }
+  }[]
 }
 
 export default defineLazyEventHandler(async () => {
@@ -77,5 +89,5 @@ export default defineLazyEventHandler(async () => {
       console.error(e, { text: text })
       return await $fetch('/recipe' as string) as unknown
     }
-  }, { swr: true, shouldBypassCache: () => !!import.meta.dev })
+  }, { swr: true, staleMaxAge: 86400, maxAge: 86400, shouldBypassCache: () => !!import.meta.dev })
 })
