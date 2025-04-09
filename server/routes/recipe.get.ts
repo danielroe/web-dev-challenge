@@ -9,9 +9,9 @@ export default defineLazyEventHandler(async () => {
   const anthropic = createAnthropic({ apiKey })
 
   return defineCachedEventHandler(async (_event) => {
-    const [{ object }, { width, height }] = await Promise.all([
+    const [{ object }, { width = 0, height = 0 }] = await Promise.all([
       generateObject({
-        model: anthropic('claude-3-opus-latest'),
+        model: anthropic('claude-3-5-haiku-latest'),
         schema: z.object({
           longTitle: z.string(),
           shortTitle: z.string(),
@@ -22,7 +22,7 @@ export default defineLazyEventHandler(async () => {
             text: z.string(),
           })),
         }),
-        prompt: `You are writing terrible recipe content for a website. They will include long digressions, life stories and irrelevant details. The more tangents the better, whilst using every possible engagement bait to keep the reader interested. The more dark patterns the better. Unleash your inner evil. Distract the reader with anecdotes, jokes, and more. Make sure not to reveal you know you are evil. You should provide a list of slides which the user will move through sequentially. Each slide should have a minimum of 500 words. Information should not be presented sequentially, but randomly, with digressions, and out of order. As much as possible users should be engaged, and distracted from the recipe. Some slides can have nothing to do with the recipe but be about cooking, anecdotes, personal life advice, and more. The recipe your stories should accompany is: ${JSON.stringify(recipe)}.`,
+        prompt: `You are writing terrible recipe content for a website. They will include long digressions, life stories and irrelevant details. The more tangents the better, whilst using every possible engagement bait to keep the reader interested. The more dark patterns the better. Unleash your inner evil. Distract the reader with anecdotes, jokes, and more. Make sure not to reveal you know you are evil. You should provide a list of at least 20 Markdown slides. Some slides can have nothing to do with the recipe but be about cooking, anecdotes, personal life advice, and more. The recipe your stories should accompany is: ${JSON.stringify(recipe)}.`,
       }),
       fetch(recipe.image).then(r => r.arrayBuffer()).then(image => imageSize(Buffer.from(image))),
     ])
