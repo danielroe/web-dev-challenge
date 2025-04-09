@@ -1,0 +1,486 @@
+{
+  "id": 642256,
+  "image": "https://img.spoonacular.com/recipes/642256-556x370.jpg",
+  "imageType": "jpg",
+  "title": "Eggless Cardamom and Chocolate Cheesecake",
+  "readyInMinutes": 90,
+  "servings": 12,
+  "sourceUrl": "http://www.foodista.com/recipe/PH6RYZVL/eggless-cardamom-and-chocolate-cheesecake",
+  "vegetarian": true,
+  "vegan": false,
+  "glutenFree": false,
+  "dairyFree": false,
+  "veryHealthy": false,
+  "cheap": false,
+  "veryPopular": false,
+  "sustainable": false,
+  "lowFodmap": false,
+  "weightWatcherSmartPoints": 23,
+  "gaps": "no",
+  "preparationMinutes": null,
+  "cookingMinutes": null,
+  "aggregateLikes": 3,
+  "healthScore": 1.0,
+  "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+  "license": "CC BY 3.0",
+  "sourceName": "Foodista",
+  "pricePerServing": 100.88,
+  "extendedIngredients": [
+    {
+      "id": 18369,
+      "aisle": "Baking",
+      "image": "white-powder.jpg",
+      "consistency": "SOLID",
+      "name": "baking powder",
+      "nameClean": "baking powder",
+      "original": "1 tsp baking powder",
+      "originalName": "baking powder",
+      "amount": 1.0,
+      "unit": "tsp",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "tsp",
+          "unitLong": "teaspoon"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "tsp",
+          "unitLong": "teaspoon"
+        }
+      }
+    },
+    {
+      "id": 1001,
+      "aisle": "Milk, Eggs, Other Dairy",
+      "image": "butter-sliced.jpg",
+      "consistency": "SOLID",
+      "name": "butter",
+      "nameClean": "butter",
+      "original": "1/4 cup butter at room temperature",
+      "originalName": "butter at room temperature",
+      "amount": 0.25,
+      "unit": "cup",
+      "meta": [
+        "at room temperature"
+      ],
+      "measures": {
+        "us": {
+          "amount": 0.25,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 56.75,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 2006,
+      "aisle": "Spices and Seasonings",
+      "image": "cardamom.jpg",
+      "consistency": "SOLID",
+      "name": "cardamom",
+      "nameClean": "cardamom",
+      "original": "½ tsp cardamom, ground into powder",
+      "originalName": "cardamom, ground into powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 0.5,
+          "unitShort": "tsps",
+          "unitLong": "teaspoons"
+        },
+        "metric": {
+          "amount": 0.5,
+          "unitShort": "tsps",
+          "unitLong": "teaspoons"
+        }
+      }
+    },
+    {
+      "id": 19165,
+      "aisle": "Baking",
+      "image": "cocoa-powder.png",
+      "consistency": "SOLID",
+      "name": "cocoa powder",
+      "nameClean": "cacao powder",
+      "original": "1/3 cup cocoa powder, sifted",
+      "originalName": "cocoa powder, sifted",
+      "amount": 0.33333334,
+      "unit": "cup",
+      "meta": [
+        "sifted"
+      ],
+      "measures": {
+        "us": {
+          "amount": 0.33333334,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 28.667,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 20027,
+      "aisle": "Baking",
+      "image": "white-powder.jpg",
+      "consistency": "SOLID",
+      "name": "cornflour",
+      "nameClean": "corn starch",
+      "original": "1 tbsp cornflour",
+      "originalName": "cornflour",
+      "amount": 1.0,
+      "unit": "tbsp",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "Tbsp",
+          "unitLong": "Tbsp"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "Tbsp",
+          "unitLong": "Tbsp"
+        }
+      }
+    },
+    {
+      "id": 1017,
+      "aisle": "Cheese",
+      "image": "cream-cheese.jpg",
+      "consistency": "SOLID",
+      "name": "cream cheese",
+      "nameClean": "cream cheese",
+      "original": "500g cream cheese, at room temperature",
+      "originalName": "cream cheese, at room temperature",
+      "amount": 500.0,
+      "unit": "g",
+      "meta": [
+        "at room temperature"
+      ],
+      "measures": {
+        "us": {
+          "amount": 1.102,
+          "unitShort": "lb",
+          "unitLong": "pounds"
+        },
+        "metric": {
+          "amount": 500.0,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 1011053,
+      "aisle": "Milk, Eggs, Other Dairy",
+      "image": "white-cream.png",
+      "consistency": "LIQUID",
+      "name": "double cream",
+      "nameClean": "double cream",
+      "original": "1 1/3 cups double cream",
+      "originalName": "double cream",
+      "amount": 1.3333334,
+      "unit": "cups",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 1.3333334,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 317.333,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 9152,
+      "aisle": "Produce",
+      "image": "lemon-juice.jpg",
+      "consistency": "LIQUID",
+      "name": "lemon juice",
+      "nameClean": "lemon juice",
+      "original": "1/3 cup lemon juice",
+      "originalName": "lemon juice",
+      "amount": 0.33333334,
+      "unit": "cup",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 0.33333334,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 81.333,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 20081,
+      "aisle": "Baking",
+      "image": "flour.png",
+      "consistency": "SOLID",
+      "name": "flour",
+      "nameClean": "wheat flour",
+      "original": "1 cup plain flour",
+      "originalName": "plain flour",
+      "amount": 1.0,
+      "unit": "cup",
+      "meta": [
+        "plain"
+      ],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "cup",
+          "unitLong": "cup"
+        },
+        "metric": {
+          "amount": 125.0,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 1036,
+      "aisle": "Cheese",
+      "image": "ricotta.png",
+      "consistency": "SOLID",
+      "name": "ricotta cheese",
+      "nameClean": "ricotta cheese",
+      "original": "500g ricotta cheese",
+      "originalName": "ricotta cheese",
+      "amount": 500.0,
+      "unit": "g",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 1.102,
+          "unitShort": "lb",
+          "unitLong": "pounds"
+        },
+        "metric": {
+          "amount": 500.0,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 19335,
+      "aisle": "Baking",
+      "image": "sugar-in-bowl.png",
+      "consistency": "SOLID",
+      "name": "sugar",
+      "nameClean": "sugar",
+      "original": "1/4 cup sugar",
+      "originalName": "sugar",
+      "amount": 0.25,
+      "unit": "cup",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 0.25,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 50.0,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 19335,
+      "aisle": "Baking",
+      "image": "sugar-in-bowl.png",
+      "consistency": "SOLID",
+      "name": "sugar",
+      "nameClean": "sugar",
+      "original": "1 ½ cups sugar",
+      "originalName": "sugar",
+      "amount": 1.5,
+      "unit": "cups",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 1.5,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 300.0,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 2050,
+      "aisle": "Baking",
+      "image": "vanilla-extract.jpg",
+      "consistency": "LIQUID",
+      "name": "vanilla extract",
+      "nameClean": "vanilla extract",
+      "original": "1 ½ tsps vanilla extract",
+      "originalName": "vanilla extract",
+      "amount": 1.5,
+      "unit": "tsps",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 1.5,
+          "unitShort": "tsps",
+          "unitLong": "teaspoons"
+        },
+        "metric": {
+          "amount": 1.5,
+          "unitShort": "tsps",
+          "unitLong": "teaspoons"
+        }
+      }
+    }
+  ],
+  "summary": "Eggless Cardamom and Chocolate Cheesecake requires around <b>1 hour and 30 minutes</b> from start to finish. This dessert has <b>504 calories</b>, <b>10g of protein</b>, and <b>34g of fat</b> per serving. This recipe serves 12 and costs $1.01 per serving. This recipe is liked by 3 foodies and cooks. A mixture of cream cheese, sugar, cardamom, and a handful of other ingredients are all it takes to make this recipe so scrumptious. It is a good option if you're following a <b>lacto ovo vegetarian</b> diet. It is brought to you by Foodista. All things considered, we decided this recipe <b>deserves a spoonacular score of 22%</b>. This score is rather bad. Similar recipes are <a href=\"https://spoonacular.com/recipes/eggless-blueberry-and-white-chocolate-baked-cheesecake-642259\">Eggless Blueberry and White Chocolate Baked Cheesecake</a>, <a href=\"https://spoonacular.com/recipes/eggless-blueberry-and-white-chocolate-baked-cheesecake-1433451\">Eggless Blueberry and White Chocolate Baked Cheesecake</a>, and <a href=\"https://spoonacular.com/recipes/eggless-banana-and-cardamom-ice-cream-642251\">Eggless Bananan and Cardamom Ice Cream</a>.",
+  "cuisines": [],
+  "dishTypes": [
+    "dessert"
+  ],
+  "diets": [
+    "lacto ovo vegetarian"
+  ],
+  "occasions": [],
+  "instructions": "<ol><li>Method for the base:</li><li>Sift together the flour and baking powder. Cream together the sugar and butter and add the vanilla extract.</li><li>Combine the flour mixture with the butter mixture quickly with cold hands or a fork.</li><li>Press the mixture into a greased 10 inch springform tin.</li><li>Method for the filling:</li><li>Beat together all of the ingredients excluding the cocoa powder and ground cardamom until it has thickened. Kurma suggests not to overmix this.</li><li>Place half of the mixture into a separate bowl and add the cocoa powder and cardamom powder. Combine thoroughly.</li><li>Place the white layer of filling over the uncooked base and finally the chocolate filling over the white layer.</li><li>Bake at 180 degrees Celsius for 1  hours until set (I left mine for 1 hour because my fan oven cooks things a little quicker).</li><li>Allow to cool and refrigerate for day. You will just have to resist the temptation of diving right in!</li></ol>",
+  "analyzedInstructions": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "number": 1,
+          "step": "Combine the flour mixture with the butter mixture quickly with cold hands or a fork.Press the mixture into a greased 10 inch springform tin.Method for the filling:Beat together all of the ingredients excluding the cocoa powder and ground cardamom until it has thickened. Kurma suggests not to overmix this.",
+          "ingredients": [
+            {
+              "id": 1032006,
+              "name": "cardamom powder",
+              "localizedName": "cardamom powder",
+              "image": "cardamom-ground.jpg"
+            },
+            {
+              "id": 19165,
+              "name": "cocoa powder",
+              "localizedName": "cocoa powder",
+              "image": "cocoa-powder.png"
+            },
+            {
+              "id": 1001,
+              "name": "butter",
+              "localizedName": "butter",
+              "image": "butter-sliced.jpg"
+            },
+            {
+              "id": 20081,
+              "name": "all purpose flour",
+              "localizedName": "all purpose flour",
+              "image": "flour.png"
+            }
+          ],
+          "equipment": []
+        },
+        {
+          "number": 2,
+          "step": "Place half of the mixture into a separate bowl and add the cocoa powder and cardamom powder.",
+          "ingredients": [
+            {
+              "id": 1032006,
+              "name": "cardamom powder",
+              "localizedName": "cardamom powder",
+              "image": "cardamom-ground.jpg"
+            },
+            {
+              "id": 19165,
+              "name": "cocoa powder",
+              "localizedName": "cocoa powder",
+              "image": "cocoa-powder.png"
+            }
+          ],
+          "equipment": [
+            {
+              "id": 404783,
+              "name": "bowl",
+              "localizedName": "bowl",
+              "image": "https://spoonacular.com/cdn/equipment_100x100/bowl.jpg"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "step": "Combine thoroughly.",
+          "ingredients": [],
+          "equipment": []
+        },
+        {
+          "number": 4,
+          "step": "Place the white layer of filling over the uncooked base and finally the chocolate filling over the white layer.",
+          "ingredients": [
+            {
+              "id": 19081,
+              "name": "chocolate",
+              "localizedName": "chocolate",
+              "image": "milk-chocolate.jpg"
+            },
+            {
+              "id": 0,
+              "name": "base",
+              "localizedName": "base",
+              "image": ""
+            }
+          ],
+          "equipment": []
+        },
+        {
+          "number": 5,
+          "step": "Bake at 180 degrees Celsius for 1  hours until set (I left mine for 1 hour because my fan oven cooks things a little quicker).Allow to cool and refrigerate for day. You will just have to resist the temptation of diving right in!",
+          "ingredients": [],
+          "equipment": [
+            {
+              "id": 404784,
+              "name": "oven",
+              "localizedName": "oven",
+              "image": "https://spoonacular.com/cdn/equipment_100x100/oven.jpg",
+              "temperature": {
+                "number": 180.0,
+                "unit": "Celsius"
+              }
+            }
+          ],
+          "length": {
+            "number": 60,
+            "unit": "minutes"
+          }
+        }
+      ]
+    }
+  ],
+  "originalId": null,
+  "spoonacularScore": 28.05112648010254,
+  "spoonacularSourceUrl": "https://spoonacular.com/eggless-cardamom-and-chocolate-cheesecake-642256"
+}
