@@ -7,6 +7,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     anthropicApiKey: '',
     spoonacularApiKey: '',
+    unsplash: {
+      accessKey: '',
+      secretKey: '',
+    },
   },
   compatibilityDate: '2024-11-01',
 

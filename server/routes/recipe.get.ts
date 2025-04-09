@@ -39,7 +39,6 @@ export default defineLazyEventHandler(async () => {
     const [{ text }, { width, height }] = await Promise.all([
       generateText({
         model: anthropic('claude-3-5-haiku-latest'),
-        // maxTokens
         messages: [
           {
             role: 'system',
@@ -55,10 +54,17 @@ export default defineLazyEventHandler(async () => {
     ])
 
     const response = JSON.parse(text.replace(/"[^"]+"/g, r => r.replace(/\n/g, '\\n'))) as Response
+    const images = await $fetch('/random-images', {
+      query: { count: response.slides.length },
+    })
 
     try {
       return {
         ...response,
+        slides: response.slides!.map((slide, i) => ({
+          ...slide,
+          image: images[i],
+        })),
         title: recipe.title,
         image: {
           src: recipe.image,
