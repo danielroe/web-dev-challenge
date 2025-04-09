@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
       Authorization: `Client-ID ${useRuntimeConfig(event).unsplash.accessKey}`,
     },
   })
-  return res.map(r => r.urls.full)
+  return res.map(r => r.urls.small)
 })
 
 type Image = {
