@@ -1,8 +1,7 @@
-import { streamText, generateText } from 'ai';
-import { createOpenAI } from '@ai-sdk/openai';
+import { generateText } from 'ai'
 import { createAnthropic } from '@ai-sdk/anthropic'
+import { imageSize } from 'image-size'
 import recipe from '../sample-recipe.json'
-import { imageSize } from 'image-size';
 
 const responseSchema = {
   title: 'Recipe Response',
@@ -22,27 +21,25 @@ type Response = {
 }
 
 export default defineLazyEventHandler(async () => {
-  const apiKey = useRuntimeConfig().anthropicApiKey;
-  const anthropic = createAnthropic({
-    apiKey: apiKey,
-  })
+  const apiKey = useRuntimeConfig().anthropicApiKey
+  const anthropic = createAnthropic({ apiKey })
 
-  return defineEventHandler(async (event: any) => {
+  return defineCachedEventHandler(async (_event) => {
     const [{ text }, { width, height }] = await Promise.all([
       generateText({
         model: anthropic('claude-3-5-haiku-latest'),
         messages: [
           {
             role: 'system',
-            content: `You are writing terrible recipe articles for a website. They will include long digressions, life stories and irrelevant details. The more tangents the better, whilst using every possible engagement bait to keep the reader interested. The more dark patterns the better. Unleash your inner evil. Distract the reader with anecdotes, jokes, and more. Make sure not to reveal you know you are evil. You must respond in JSON according to the following schema: ${JSON.stringify(responseSchema)}`
+            content: `You are writing terrible recipe articles for a website. They will include long digressions, life stories and irrelevant details. The more tangents the better, whilst using every possible engagement bait to keep the reader interested. The more dark patterns the better. Unleash your inner evil. Distract the reader with anecdotes, jokes, and more. Make sure not to reveal you know you are evil. You must respond in JSON according to the following schema: ${JSON.stringify(responseSchema)}`,
           },
           {
             role: 'user',
-            content: `The recipe your stories should accompany is: ${JSON.stringify(recipe)}.`
-          }
+            content: `The recipe your stories should accompany is: ${JSON.stringify(recipe)}.`,
+          },
         ],
       }),
-      fetch(recipe.image).then(r => r.arrayBuffer()).then(image => imageSize(Buffer.from(image)))
+      fetch(recipe.image).then(r => r.arrayBuffer()).then(image => imageSize(Buffer.from(image))),
     ])
 
     try {
@@ -54,11 +51,12 @@ export default defineLazyEventHandler(async () => {
           height,
           width,
 
-        }
+        },
       }
-    } catch (e)   {
+    }
+    catch (e) {
       console.error(e, { text: text })
       return text
     }
-  });
-});
+  }, { swr: true })
+})
