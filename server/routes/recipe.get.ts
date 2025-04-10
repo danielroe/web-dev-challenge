@@ -1,7 +1,7 @@
 import { generateText } from 'ai'
 import { createAnthropic } from '@ai-sdk/anthropic'
 import { imageSize } from 'image-size'
-import recipe from '../sample-recipe.json'
+import type sample from '../sample-recipe.json'
 
 const responseSchema = {
   type: 'object',
@@ -47,7 +47,16 @@ export default defineLazyEventHandler(async () => {
   const apiKey = useRuntimeConfig().anthropicApiKey
   const anthropic = createAnthropic({ apiKey })
 
-  return defineCachedEventHandler(async (_event) => {
+  return defineCachedEventHandler(async (event) => {
+    const query = getQuery(event)
+    const { recipes } = await $fetch<{ recipes: Array<typeof sample> }>('https://api.spoonacular.com/recipes/random', {
+      query: {
+        ...query.cookies ? { 'include-tags': 'cookies' } : {},
+        apiKey: useRuntimeConfig(event).spoonacularApiKey,
+      },
+    })
+    const recipe = recipes[0]
+    console.log(recipe)
     const [{ text }, { width, height }] = await Promise.all([
       generateText({
         model: anthropic('claude-3-5-haiku-latest'),
@@ -73,6 +82,9 @@ export default defineLazyEventHandler(async () => {
     try {
       return {
         ...response,
+        instructions: recipe.instructions,
+        ingredients: recipe.extendedIngredients,
+        ingredientImages: recipe.analyzedInstructions.flatMap(i => i.steps.flatMap(step => step.ingredients.map(i => i.image))).map(i => `https://spoonacular.com/cdn/ingredients_500x500/${i}`),
         slides: response.slides!.map((slide, i) => ({
           ...slide,
           image: images[i],
@@ -89,5 +101,5 @@ export default defineLazyEventHandler(async () => {
       console.error(e, { text: text })
       return await $fetch('/recipe' as string) as unknown
     }
-  }, { swr: true, staleMaxAge: 86400, maxAge: 86400, shouldBypassCache: () => !!import.meta.dev })
+  }, { getKey: event => getQuery(event).cookies ? 'cookies' : 'recipe', swr: true, staleMaxAge: 86400, maxAge: 86400, shouldBypassCache: () => !!import.meta.dev })
 })
